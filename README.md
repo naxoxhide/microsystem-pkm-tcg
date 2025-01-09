@@ -1,7 +1,7 @@
 <h1 align="center">Lab Microsystem - Pokémon TCG </h1>
 
 <p align="center">
-  Front + API + Docker para manejo de Set y Cartas Pokémon
+  React + NestJs + Docker para manejo de Set y Cartas Pokémon
 </p>
 
 <p align="center">
@@ -60,3 +60,38 @@ pnpm install
 ```bash
 pnpm run dev
 ```
+
+## ⚙️ Rutas
+
+El proyecto en React cuenta con uso de Route para navegar como una SPA entre los set y las cartas de cada set.
+
+Cuenta con una página de error 404 al no soportar la url que están el las rutas. 
+
+Los ejemplos de rutas son lo siguientes, para validar la re direccionamiento al 404 cuando no corresponde:
+
+<p>
+    Home - Set Disponibles
+</p>
+
+```bash
+http://localhost:5173
+```
+
+<p>
+    Cartas - Cartas que contiene cada Set
+</p>
+
+```bash
+http://localhost:5173/cards/setid
+
+```
+Donde setid es el id del set donde se quiere visualizar las cartas
+
+<p>
+    404 - Error
+</p>
+
+```bash
+http://localhost:5173/loqusea
+```
+Esto debería llevar a la página de error
