@@ -6,7 +6,7 @@ import { Card } from './entities/card.entity';
 export class CardController {
   constructor(private readonly cardService: CardService) {}
 
-  @Get('set/:setId')
+  @Get(':setId')
   async getCardBySetId(
     @Param('setId') setId: string,
     @Query('rarity') rarity?: string,

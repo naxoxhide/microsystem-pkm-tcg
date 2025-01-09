@@ -9,9 +9,4 @@ export class SetController {
   findAll() {
     return this.setService.findAll();
   }
-
-  // @Get(':id')
-  // findOne(@Param('id') id: string) {
-  //   return this.setService.findOne(+id);
-  // }
 }
