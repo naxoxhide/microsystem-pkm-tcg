@@ -1,4 +1,4 @@
-<h1 align="center">Lab Mycrosistem - Pokémon TCG </h1>
+<h1 align="center">Lab Microsystem - Pokémon TCG </h1>
 
 <p align="center">
   Front + API + Docker para manejo de Set y Cartas Pokémon
