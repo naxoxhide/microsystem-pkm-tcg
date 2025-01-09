@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { type Image } from '../types.d';
-import { Modal } from './Modal';
+import { type Image } from '../../types';
+import { Modal } from '../Modal';
 import './card.css';
 
 export function CardsBySetList({ routeParams }: any) {
@@ -16,7 +16,7 @@ export function CardsBySetList({ routeParams }: any) {
     if (filters.type) queryParams.append('type', filters.type);
     if (filters.subtype) queryParams.append('subtype', filters.subtype);
 
-    const url = `http://localhost:3000/card/set/${routeParams.setCode.setId}?${queryParams.toString()}`;
+    const url = `http://localhost:3000/card/${routeParams.setCode.setId}?${queryParams.toString()}`;
     console.log('Fetching data from:', url); // Debug
 
     fetch(url)
@@ -44,47 +44,45 @@ export function CardsBySetList({ routeParams }: any) {
 
   return (
     <div>
-      {/* Filtros */}
       <div className="flex justify-center space-x-4 mb-6">
         <button
           onClick={() => handleFilterChange('rarity', 'Common')}
-          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Common' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Common' ? 'bg-white-600 text-white' : 'bg-gray-200'}`}
         >
           Common
         </button>
         <button
           onClick={() => handleFilterChange('rarity', 'Uncommon')}
-          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Uncommon' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Uncommon' ? 'bg-white-600 text-white' : 'bg-gray-200'}`}
         >
           Uncommon
         </button>
         <button
           onClick={() => handleFilterChange('rarity', 'Rare')}
-          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Rare' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Rare' ? 'bg-white-600 text-white' : 'bg-gray-200'}`}
         >
           Rare
         </button>
         <button
           onClick={() => handleFilterChange('rarity', 'Double Rare')}
-          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Double Rare' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Double Rare' ? 'bg-white-600 text-white' : 'bg-gray-200'}`}
         >
           Pokémon EX
         </button>
         <button
           onClick={() => handleFilterChange('rarity', 'Illustration Rare')}
-          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Illustration Rare' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'Illustration Rare' ? 'bg-white-600 text-white' : 'bg-gray-200'}`}
         >
           Special Art
         </button>
         <button
           onClick={() => handleFilterChange('rarity', 'ACE SPEC Rare')}
-          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'ACE SPEC Rare' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-md bg-red-400 ${filters.rarity === 'ACE SPEC Rare' ? 'bg-white-600 text-white' : 'bg-gray-200'}`}
         >
           ACE SPEC
         </button>
       </div>
 
-      {/* Grid de imágenes */}
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {image.map((image) => (
           <img
@@ -96,7 +94,6 @@ export function CardsBySetList({ routeParams }: any) {
         ))}
       </div>
 
-      {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={closeModal} card={selectedCard} />
     </div>
   );

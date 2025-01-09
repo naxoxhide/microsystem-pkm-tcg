@@ -32,7 +32,7 @@ docker compose up -d
 
 ## ⚙️ Building
 
-Para iniciar el proyecto a nivel de NestJS, seguir los siguientes comandos en **api-tcg-pkm** 
+Para iniciar back-end del proyecto en NestJS, seguir los siguientes comandos en **api-tcg-pkm** 
 
 ```bash
 cd api-tcg-pkm/
@@ -44,4 +44,19 @@ pnpm install
 
 ```bash
 pnpm start:dev
+```
+
+Para iniciar el front-end desarrollado en ReactJs, seguir los
+siguientes comandos en **front-lab-tcg-pkm**
+
+```bash
+cd front-lab-tcg-pkm/
+```
+
+```bash
+pnpm install
+```
+
+```bash
+pnpm run dev
 ```

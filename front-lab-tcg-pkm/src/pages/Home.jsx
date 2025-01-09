@@ -1,5 +1,4 @@
-import '../components/SetList.css';
-import { SetsList } from '../components/SetList';
+import { SetsList } from '../components/SetList/SetList';
 
 export default function SetList() {
     return (

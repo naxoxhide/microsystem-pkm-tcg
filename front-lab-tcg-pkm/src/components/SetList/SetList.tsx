@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { type Set } from '../types.d'
-import { Link } from './Link'
+import { type Set } from '../../types'
+import { Link } from '../Link'
 import './SetList.css';
 
 export function SetsList() {
