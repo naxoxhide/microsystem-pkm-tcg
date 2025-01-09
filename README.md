@@ -19,16 +19,24 @@
 
 Este proyecto utiliza pnpm como manejador de paquetes, React para el desarrollo del front, NestJS para el back y Postgres para el uso de base de datos
 
-La base de datos esta  dockerizada 🐳, para poder inicar el uso de la base de datos en **development mode**, se debe correr el siguiente comando en la carpeta de bookapi:
+La base de datos esta  dockerizada 🐳, para poder inicar el uso de la base de datos en **development mode**, se debe correr el siguiente comando en la carpeta de **docker**:
 
 ```bash
-docker-compose up -d my-service-dev
+cd docker
+```
+
+```bash
+docker compose up -d
 ```
 
 
 ## ⚙️ Building
 
 Para iniciar el proyecto a nivel de NestJS, seguir los siguientes comandos en **api-tcg-pkm** 
+
+```bash
+cd api-tcg-pkm/
+```
 
 ```bash
 pnpm install
